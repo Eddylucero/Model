@@ -26,7 +26,6 @@ def predict():
         if features is None:
             return jsonify({"error": "Debe enviar un JSON con la clave 'features'"}), 400
 
-        # Convertir a DataFrame
         df = pd.DataFrame(features if isinstance(features, list) else [features])
 
         # Verificar columnas
